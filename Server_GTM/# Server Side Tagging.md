@@ -39,13 +39,13 @@
 
 ([ссылка](https://img.netpeak.ua/vinnie/4SMPYF.png))
 
-2.3. Заполняем первый шаг регистрации
+2.3. Заполняем первый шаг регистрации.
 
 ![alt_text](https://img.netpeak.ua/vinnie/59ISXU.png "image_tooltip")
 
 ([ссылка](https://img.netpeak.ua/vinnie/59ISXU.png.png))
 
-2.4. Подтверждаем номер телефона
+2.4. Подтверждаем номер телефона.
 
 ![alt_text](https://img.netpeak.ua/vinnie/4SP5YQ.png "image_tooltip")
 
@@ -234,7 +234,7 @@ Cloud Shell выведет на экран URL приложения. Его на
 
 После чего откроется страница Google Search Console.
 
-3.4.6. В поле регистратор домена выбираем Другое
+3.4.6. В поле регистратор домена выбираем Другое.
 
 ![alt_text](https://img.netpeak.ua/vinnie/59BW2P.png "image_tooltip")
 
