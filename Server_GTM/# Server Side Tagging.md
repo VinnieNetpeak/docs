@@ -2,16 +2,16 @@
 
 ## 1. Создание серверного контейнера
 
-1.1. Чтобы создать новый серверный контейнер нужно перейти на вкладку Admin текущего клиентского аккаунта и нажать +
+1.1. Чтобы создать новый серверный контейнер нужно перейти на вкладку Admin текущего клиентского аккаунта и нажать +.
 
-![alt_text](https://img.netpeak.ua/vinnie/4SKSU4.png "image_tooltip")
+![alt_text](http://img.netpeak.ua/vinnie/5CYOPH.png "image_tooltip")
 
 
 ([ссылка](https://img.netpeak.ua/vinnie/4SKSU4.png))
 
 **Важно!** Не создавайте новый аккаунт, если у клиента уже есть аккаунт в GTM. Если аккаунта нет, то в таком случае просто создаем новый с нуля.
 
-1.2. Заполняем название контейнера и выбираем тип - Server
+1.2. Заполняем название контейнера и выбираем тип - Server.
 
 
 ![alt_text](https://img.netpeak.ua/vinnie/4SL65C.png "image_tooltip")
@@ -19,7 +19,7 @@
 
 ([ссылка](https://img.netpeak.ua/vinnie/4SL65C.png))
 
-1.3. На стартовом экране выбираем Close
+1.3. На стартовом экране выбираем Close.
 
 ![alt_text](https://img.netpeak.ua/vinnie/4SLGJB.png "image_tooltip")
 
