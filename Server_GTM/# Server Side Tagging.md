@@ -19,7 +19,7 @@
 
 ([ссылка](https://img.netpeak.ua/vinnie/4SL65C.png))
 
-1.3. На стартовом экране выбираем Close
+1.3. На стартовом экране выбираем Close.
 
 ![alt_text](https://img.netpeak.ua/vinnie/4SLGJB.png "image_tooltip")
 
