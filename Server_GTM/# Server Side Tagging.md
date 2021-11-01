@@ -113,7 +113,7 @@
     gcloud config set project <PROJECT_ID>
 
 
-![alt_text](http://img.netpeak.ua/vinnie/59K5IO.png "image_tooltip")
+![alt_text](https://img.netpeak.ua/vinnie/59K5IO.png "image_tooltip")
 
 
 ([ссылка](http://img.netpeak.ua/vinnie/59K5IO.png))
@@ -124,17 +124,17 @@
 
 3.3.6. Cloud Shell в ответ запросит конфиг GTM.
 
-![alt_text](http://img.netpeak.ua/vinnie/59KG3H.png "image_tooltip")
+![alt_text](https://img.netpeak.ua/vinnie/59KG3H.png "image_tooltip")
 
 
-([ссылка](http://img.netpeak.ua/vinnie/59KG3H.png))
+([ссылка](https://img.netpeak.ua/vinnie/59KG3H.png))
 
 3.3.7. На запрос установки URL политик и настройки логирования можно нажимать Enter
 
 ![alt_text](https://img.netpeak.ua/vinnie/58Z6FI.png "image_tooltip")
 
 
-([ссылка](httpы://img.netpeak.ua/vinnie/58Z6FI.png))
+([ссылка](https://img.netpeak.ua/vinnie/58Z6FI.png))
 
 3.3.8. На запрос типа деплоймента прописываем “testing” и нажимаем продолжить.
 
@@ -158,10 +158,10 @@
 ([ссылка](https://img.netpeak.ua/vinnie/58ZY43.png))
 
 
-![alt_text](http://img.netpeak.ua/vinnie/59KT28.png "image_tooltip")
+![alt_text](https://img.netpeak.ua/vinnie/59KT28.png "image_tooltip")
 
 
-([ссылка](http://img.netpeak.ua/vinnie/59KT28.png))
+([ссылка](https://img.netpeak.ua/vinnie/59KT28.png))
 
 3.3.10. После окончания установки прописываем команду
 
@@ -249,5 +249,27 @@ Cloud Shell выведет на экран URL приложения. Его на
 
 ([ссылка](https://img.netpeak.ua/vinnie/59CJ9W.png))
 
+3.4.8. После подтверждения домена ставим задачу на вторую часть привязки DNS по шаблону.
 
 ## 4. Подготовка технического заданий для клиента
+
+4.1. Facebook Conversions API для идентификации пользователей может использовать челый набор идентификаторов:
+
+* fbp - стандартный идентификатор пользователя, которые присваивается всем браузерам, с котроых посещается сайт с установленным пикселем;
+* fbc - стандартный идентификатор клика по рекламе Facebook, который привел к посещению сайта с установленным пикселем;
+* email_adress - почта пользователя;
+* phone_number - номер телефона пользователя;
+* first_name - имя пользователя;
+* last_name - фамилия пользвоателя;
+* city - город проживания пользователя;
+* state - регион, область проживания пользователя;
+* postal_code - почтовый индекс пользователя;
+* country - страна проживания пользователя.
+
+Для передачи fbp и fbc забираются с cookie. Для остальных идентификатов необходимо настроить передачу данных в dataLayer.
+
+4.2. Для составление технического задания необходимо подходить индивидуально в зависимости от сайта: какие формы обратной связи используются, какие поля содержат эти формы, есть ли возможность передчи данных из бекенда и т.п. Дополнительно в задание также нужно включить все добавочные события, которые могут пригодиться позже.
+
+Для составления такого технического задания обязательно изучить сайт клиента, провести мозговой штурм для того, чтобы опрдеелить все необходимые события.
+
+Примерный [шаблон](https://docs.google.com/document/d/1Ed9Kj_tfgjVzPWtnbnsEd7S623txqY-rWvXAOzwhFZM/edit?usp=sharing) для сайта услуг с формой обратной связи с одним полем для номера телефона.
