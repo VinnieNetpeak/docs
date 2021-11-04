@@ -311,5 +311,57 @@ Mac:
 
 Если сайт небольшой, то нужно проверить все возможные события. Если же сайт многостраничный, то достаточно проверрить каждое событие в разных сценариях, например отправку формы со страницы разных услуг или транзакцию с разным набором товаров.
 
+## 5. Работа с GTM
+
+5.1. Нужно убедиться, что у клиета есть ресурс Google Analytics 4.
+
+![alt_text](https://img.netpeak.ua/vinnie/6IO94H.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/6IO94H.png))
+
+5.2. Если ресурса нет, то создаем новый. Называть новый ресурс по схеме нейминга клиента, добавляя а скобках "(GA4)" или просто "домен без www (GA4)", например "site.com (GA4)"
+
+![alt_text](https://img.netpeak.ua/vinnie/6IQ7ZP.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/6IQ7ZP.png))
+
+5.3. Будет предложено создать потоr данных, выбираем Веб.
+
+![alt_text](https://img.netpeak.ua/vinnie/6IQPRD.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/6IQPRD.png))
+
+5.4. Вводим сайт и название потока
+
+![alt_text](https://img.netpeak.ua/vinnie/6IRY43.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/6IRY43.png))
+
+5.5. В дальнейшем понадобится идентификатор потока, который будет показан в следующем экране.
+
+![alt_text](https://img.netpeak.ua/vinnie/6ISEAK.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/6ISEAK.png))
+
+После выхода, чтобы найти идентификатор потока, необходимо перейти в раздел Администратора, выбрать Потоки данных и перейти на нужный поток.
+
+![alt_text](https://img.netpeak.ua/vinnie/6ISNJG.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/6ISNJG.png))
+
+
+
+
+
+
+
+
+5.1.1. Создаем тег
 
 
