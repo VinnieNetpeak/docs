@@ -4,7 +4,7 @@
 
 1.1. Чтобы создать новый серверный контейнер нужно перейти на вкладку Admin текущего клиентского аккаунта и нажать +.
 
-![alt_text](http://img.netpeak.ua/vinnie/5CYOPH.png "image_tooltip")
+![alt_text](https://img.netpeak.ua/vinnie/5CYOPH.png "image_tooltip")
 
 
 ([ссылка](https://img.netpeak.ua/vinnie/4SKSU4.png))
@@ -88,18 +88,18 @@
 3.3.1. На домашней странице проекта идем в настройки проекта. 
 
 
-![alt_text](http://img.netpeak.ua/vinnie/59JC2P.png "image_tooltip")
+![alt_text](https://img.netpeak.ua/vinnie/59JC2P.png "image_tooltip")
 
 
-([ссылка](http://img.netpeak.ua/vinnie/59JC2P.png))
+([ссылка](https://img.netpeak.ua/vinnie/59JC2P.png))
 
 3.3.2. Меняем название проекта на ID GTM контейнера (GTM-XXXXXXX). 
 
 
-![alt_text](http://img.netpeak.ua/vinnie/59JIPA.png "image_tooltip")
+![alt_text](https://img.netpeak.ua/vinnie/59JIPA.png "image_tooltip")
 
 
-([ссылка](http://img.netpeak.ua/vinnie/59JIPA.png))
+([ссылка](https://img.netpeak.ua/vinnie/59JIPA.png))
 
 3.3.3. Запускаем Cloud Shell
 
@@ -253,9 +253,9 @@ Cloud Shell выведет на экран URL приложения. Его на
 
 ## 4. Подготовка технического заданий для клиента
 
-4.1. Facebook Conversions API для идентификации пользователей может использовать челый набор идентификаторов:
+4.1. Facebook Conversions API для идентификации пользователей может использовать целый набор идентификаторов:
 
-* fbp - стандартный идентификатор пользователя, которые присваивается всем браузерам, с котроых посещается сайт с установленным пикселем;
+* fbp - стандартный идентификатор пользователя, которые присваивается всем браузерам, с которых посещается сайт с установленным пикселем;
 * fbc - стандартный идентификатор клика по рекламе Facebook, который привел к посещению сайта с установленным пикселем;
 * email_adress - почта пользователя;
 * phone_number - номер телефона пользователя;
