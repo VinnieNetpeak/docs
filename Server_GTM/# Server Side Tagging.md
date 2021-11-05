@@ -266,7 +266,17 @@ Mac:
 
 ([ссылка](https://img.netpeak.ua/vinnie/6I0NJP.png))
 
-3.4.8. После подтверждения домена ставим задачу на вторую часть привязки DNS по шаблону.
+3.4.8. На следующем шаге удаляем домен с www.
+
+![alt_text](https://img.netpeak.ua/vinnie/6NP0F3.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/6NP0F3.png))
+
+
+3.4.8. После подтверждения домена ставим задачу на вторую часть привязки DNS по [шаблону](https://t.netpeak.group/task/3395258).
+
+
 
 ## 4. Подготовка технического заданий для клиента
 
@@ -313,35 +323,37 @@ Mac:
 
 ## 5. Работа с GTM
 
-5.1. Нужно убедиться, что у клиета есть ресурс Google Analytics 4.
+5.1. Google Analytics
+
+5.1.1. Нужно убедиться, что у клиета есть ресурс Google Analytics 4.
 
 ![alt_text](https://img.netpeak.ua/vinnie/6IO94H.png "image_tooltip")
 
 
 ([ссылка](https://img.netpeak.ua/vinnie/6IO94H.png))
 
-5.2. Если ресурса нет, то создаем новый. Называть новый ресурс по схеме нейминга клиента, добавляя а скобках "(GA4)" или просто "домен без www (GA4)", например "site.com (GA4)"
+5.1.2. Если ресурса нет, то создаем новый. Называть новый ресурс по схеме нейминга клиента, добавляя а скобках "(GA4)" или просто "домен без www (GA4)", например "site.com (GA4)"
 
 ![alt_text](https://img.netpeak.ua/vinnie/6IQ7ZP.png "image_tooltip")
 
 
 ([ссылка](https://img.netpeak.ua/vinnie/6IQ7ZP.png))
 
-5.3. Будет предложено создать потоr данных, выбираем Веб.
+5.1.3. Будет предложено создать потоr данных, выбираем Веб.
 
 ![alt_text](https://img.netpeak.ua/vinnie/6IQPRD.png "image_tooltip")
 
 
 ([ссылка](https://img.netpeak.ua/vinnie/6IQPRD.png))
 
-5.4. Вводим сайт и название потока
+5.1.4. Вводим сайт и название потока
 
 ![alt_text](https://img.netpeak.ua/vinnie/6IRY43.png "image_tooltip")
 
 
 ([ссылка](https://img.netpeak.ua/vinnie/6IRY43.png))
 
-5.5. В дальнейшем понадобится идентификатор потока, который будет показан в следующем экране.
+5.1.5. В дальнейшем понадобится идентификатор потока, который будет показан в следующем экране. Его можно скопировать в блокнот.
 
 ![alt_text](https://img.netpeak.ua/vinnie/6ISEAK.png "image_tooltip")
 
@@ -354,6 +366,61 @@ Mac:
 
 
 ([ссылка](https://img.netpeak.ua/vinnie/6ISNJG.png))
+
+5.2. Facebook
+
+5.2.1. Пиксель клиента обязательно привязывается к Business Manager Netpeak (это сделает PM). Чтобы проделать работы этого раздела, необходимо иметь досуп к нему. Если доступа еще нет, его может выдать [Slasya](https://telegram.me/an_kundelskaya). Доступ нужен на уровне Администратор.
+
+5.2.2. В [Event Manager](https://www.facebook.com/events_manager2/) переходим на пиксель клиент на вкладку настройки. Нудно пролистать до раздела Conversions API и нажать на Сгенерировать маркер доступа. Маркер скопировать в блокнон.
+
+![alt_text](https://img.netpeak.ua/vinnie/6NKSTO.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/6NKSTO.png))
+
+Если такой кнопки не будет, то нажать на кнопку Начать. Запустится сценарий руковдства настройки. В нем нужно пройти все шаги до момента генерации маркера доступа. 
+
+5.2.3. Переходим на вкладку тестироване событий и копируем в блокнот код для тестирования серверных событий.
+
+![alt_text](https://img.netpeak.ua/vinnie/6NLG6M.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/6NLG6M.png))
+
+5.3. Google Tag Manager.
+
+5.3.1. Server Google Tag Manager.
+
+5.3.1.1. Создаем новый тег типа Google Analytics 4.
+
+![alt_text](https://img.netpeak.ua/vinnie/6NNO7K.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/6NNO7K.png))
+
+Вносим ранее скопированный идентификатор потока.
+
+![alt_text](https://img.netpeak.ua/vinnie/6NO0S4.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/6NO0S4.png))
+
+Триггер выбираем Специальный. Переключаемся на некторые события и в параметрах указываем Client Name ровно GA4.
+
+![alt_text](https://img.netpeak.ua/vinnie/6NOC3Q.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/6NOC3Q.png))
+
+5.3.1.2. 
+
+
+
+
+
+
+
+
 
 
 
