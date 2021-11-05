@@ -371,7 +371,7 @@ Mac:
 
 5.2.1. Пиксель клиента обязательно привязывается к Business Manager Netpeak (это сделает PM). Чтобы проделать работы этого раздела, необходимо иметь досуп к нему. Если доступа еще нет, его может выдать [Slasya](https://telegram.me/an_kundelskaya). Доступ нужен на уровне Администратор.
 
-5.2.2. В [Event Manager](https://www.facebook.com/events_manager2/) переходим на пиксель клиент на вкладку настройки. Нудно пролистать до раздела Conversions API и нажать на Сгенерировать маркер доступа. Маркер скопировать в блокнон.
+5.2.2. В [Event Manager](https://www.facebook.com/events_manager2/) переходим в пиксель клиента на вкладку настройки. Нужно пролистать до раздела Conversions API и нажать на Сгенерировать маркер доступа. Маркер скопировать в блокнот.
 
 ![alt_text](https://img.netpeak.ua/vinnie/6NKSTO.png "image_tooltip")
 
