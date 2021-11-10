@@ -371,7 +371,7 @@ Mac:
 
 5.2.1. Пиксель клиента обязательно привязывается к Business Manager Netpeak (это сделает PM). Чтобы проделать работы этого раздела, необходимо иметь досуп к нему. Если доступа еще нет, его может выдать [Slasya](https://telegram.me/an_kundelskaya). Доступ нужен на уровне Администратор.
 
-5.2.2. В [Event Manager](https://www.facebook.com/events_manager2/) переходим в пиксель клиента на вкладку настройки. Нужно пролистать до раздела Conversions API и нажать на Сгенерировать маркер доступа. Маркер скопировать в блокнот.
+5.2.2. В [Event Manager](https://www.facebook.com/events_manager2/) переходим в пиксель клиента на вкладку настройки. Нужно пролистать до раздела Conversions API и нажать на Сгенерировать маркер доступа. Маркер скопировать в блокнот. Также сразу скопировать ID пикселя.
 
 ![alt_text](https://img.netpeak.ua/vinnie/6NKSTO.png "image_tooltip")
 
@@ -405,14 +405,122 @@ Mac:
 
 ([ссылка](https://img.netpeak.ua/vinnie/6NO0S4.png))
 
-Триггер выбираем Специальный. Переключаемся на некторые события и в параметрах указываем Client Name ровно GA4.
+Триггер выбираем Специальный. Переключаемся на некторые события и в параметрах указываем Client Name ровно GA4. После чего сохраняем тег.
 
 ![alt_text](https://img.netpeak.ua/vinnie/6NOC3Q.png "image_tooltip")
 
 
 ([ссылка](https://img.netpeak.ua/vinnie/6NOC3Q.png))
 
-5.3.1.2. 
+5.3.1.2. Нажимаем создать новый тег и переходим в галерею пользовательских шаблонов.
+
+![alt_text](https://img.netpeak.ua/vinnie/7DD6Y8.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/7DD6Y8.png))
+
+5.3.1.3. В рабочую область нужно добавить Facebook Conversion API Tag (Автор: facebookincubator).
+
+![alt_text](https://img.netpeak.ua/vinnie/7DDUEZ.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/7DDUEZ.png))
+
+5.3.1.4. Создаем новый тег типа Facebook Conversion API. Вставляем ранее скопированные ID пикселя, маркер доступа и код для тестирования событий.
+
+![alt_text](https://img.netpeak.ua/vinnie/7DEE0Q.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/7DEE0Q.png))
+
+5.3.1.5. Триггер выбираем Специальный. Переключаемся на некторые события и в параметрах указываем Client Name ровно GA4. После чего сохраняем тег.
+
+![alt_text](https://img.netpeak.ua/vinnie/6NOC3Q.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/6NOC3Q.png))
+
+5.3.2. Web Google Tag Manager.
+
+5.3.2.1. Создаем две переменные типа Основной файл cookie. В первую вносим в качестве названия _fbp, во вторую - _fbc.
+
+![alt_text](https://img.netpeak.ua/vinnie/7DFEMH.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/7DFEMH.png))
+
+![alt_text](https://img.netpeak.ua/vinnie/7DFI08.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/7DFI08.png))
+
+5.3.2.2. Создаем переменную из галереи шаблонов типа Event Id (Автор: mbaersch). Тут ничего дополнительно указывать не надо.
+
+![alt_text](https://img.netpeak.ua/vinnie/7DFS4X.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/7DFS4X.png))
+
+5.3.2.3. В теге Facebook пикселя необходимо добавить идентификатор события, чтобы система могла удалять события, которые приходят от Сервера и Браузера. В строке, где указывается отслеживание просмотра страницы добавить:
+
+        fbq('track', 'PageView', {}, {eventID: '{{FB / Event ID}}'});
+
+где {{FB / Event ID}} - название переменной с Event ID
+
+
+![alt_text](https://img.netpeak.ua/vinnie/7DGMG6.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/7DGMG6.png))
+
+**Примечание**. Идентификатор события нужно добавить во все теги Facebook, события которых будут дублироваться с серверными событиями.
+
+Например, если в Web контейнере (или напрямую через сайт) уже настроено отслеживание события Lead и с сервера предпологается также отправлять событие Lead, то  к браузерному событию необходимо добавлять Event ID. Как вариант избежать этого - просто переназывать событие, которое будет оптравляться с сервера другим образом, например LeadForm.
+
+5.3.2.4. Создаем тег типа Google Аналитика: конфигурация GA4. Вносим идентификатор потока, который был скопирован ранее.
+
+Отмечаем Отправлять в серверный контейнер и вносим URL, где развернут серверный GTM.
+
+Далее задаем дополнительные поля:
+
+* fbp - переменная cookie _fbp;
+* fbc - переменная cookie _fbc;
+* event_id - перемення с Event ID.
+
+Триггер - App Pages.
+
+![alt_text](https://img.netpeak.ua/vinnie/7DIIIL.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/7DIIIL.png))
+
+После этой базовой настройки и публикации контейнер в разделе тестирование событий в Facebook Event Manager начнут поступать события просмотров страниц.
+
+![alt_text](https://img.netpeak.ua/vinnie/7DJ5FG.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/7DJ5FG.png))
+
+5.3.2.5. Далле для примера отправки события Lead с именем пользователя и номером телефона. 
+
+Создаем тег типа Google Аналитика: событие GA4 и выбираем ему ранее настроенный тег конфигурации.
+
+В качестве названия вносим Lead. Название тега будет сопоставляться с Facebook. И с таким названием в Event Manager собфтие будет отображаться как Лид.
+
+![alt_text](https://img.netpeak.ua/vinnie/7DKOM0.png "image_tooltip")
+
+
+([ссылка](https://img.netpeak.ua/vinnie/7DKOM0.png))
+
+
+
+
+
+5.3.2.4. 
+
+
+
+
 
 
 
